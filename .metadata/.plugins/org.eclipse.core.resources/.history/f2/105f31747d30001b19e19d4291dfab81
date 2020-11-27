@@ -1,0 +1,5 @@
+package com.learning.inheritancediconfig;
+
+public class DemoC extends DemoP{
+
+}

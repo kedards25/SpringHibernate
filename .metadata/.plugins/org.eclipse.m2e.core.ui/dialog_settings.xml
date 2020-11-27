@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiApplicationContext\src\main\java\com\learning\dependecyinjectionapplicationcontext\App.java"/>
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\IheritanceDiConfig\src\main\java\com\learning\inheritancediconfig\App.java"/>
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DependencyInjectionConfig\src\main\java\com\learning\dependencyinjectionconfig\DemoClass.java"/>
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\HibernateDemo\src\main\java\com\learning\hibernatedemo\App.java"/>
+			<item value="D:\Professional\NIIT\Online Sessions\Adv Java 9-11\MVC_Demo2\WebContent\index.html"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.learning.diannotations"/>
+			<item value="com.learning.dependecyinjectionapplicationcontext"/>
+			<item value="com.learning.inheritancediconfig"/>
+			<item value="com.learning.constructorinjectionconfig"/>
+			<item value="com.learning.propertyinjectionconfig"/>
+			<item value="com.learning.dependencyinjectionconfig"/>
+			<item value="com.learning.hibernatedemo"/>
+		</list>
+		<list key="groupId">
+			<item value="com.learning.diannotations"/>
+			<item value="com.learning.dependecyinjectionapplicationcontext"/>
+			<item value="com.learning.inheritancediconfig"/>
+			<item value="com.learning.constructorinjectionconfig"/>
+			<item value="com.learning.propertyinjectionconfig"/>
+			<item value="com.learning.dependencyinjectionconfig"/>
+			<item value="com.learning.hibernatedemo"/>
+		</list>
+		<list key="artifactId">
+			<item value="DiAnnotations"/>
+			<item value="DiApplicationContext"/>
+			<item value="IhertanceDiConfig"/>
+			<item value="ConstructorInjectionConfig"/>
+			<item value="PropertyInjectionConfig"/>
+			<item value="DependencyInjectionConfig"/>
+			<item value="HibernateDemo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

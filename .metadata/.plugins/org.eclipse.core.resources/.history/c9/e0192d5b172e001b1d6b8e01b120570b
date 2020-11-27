@@ -1,0 +1,5 @@
+package com.learning.hibernatedemo.models;
+
+public class SampleModel {
+
+}

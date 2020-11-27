@@ -1,0 +1,10 @@
+package com.learning.inheritancediconfig;
+
+public class DemoC extends DemoP{
+
+	public void showColor()
+	{
+		System.out.println("Color from parent class: "+getColor());
+	}
+	
+}

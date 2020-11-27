@@ -1,0 +1,21 @@
+package com.learning.hibernatedemo.service;
+
+import java.util.Properties;
+
+import org.hibernate.SessionFactory;
+
+public class HibernateUtil {
+
+	public static SessionFactory sessionFactory=null;
+	
+	public SessionFactory getSessionFactory()
+	{
+		if(sessionFactory==null)
+		{
+			Properties properties=new Properties();
+			properties.setProperty("hibernate.connection.driver_class",)
+		}
+		return sessionFactory;
+	}
+	
+}

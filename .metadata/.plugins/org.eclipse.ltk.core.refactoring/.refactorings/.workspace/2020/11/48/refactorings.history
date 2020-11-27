@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;IhertanceDiConfig&apos; to &apos;IheritanceDiConfig&apos;" description="Rename resource &apos;IhertanceDiConfig&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/IhertanceDiConfig" name="IheritanceDiConfig" stamp="1606459924443" updateReferences="true"/>
+</session>

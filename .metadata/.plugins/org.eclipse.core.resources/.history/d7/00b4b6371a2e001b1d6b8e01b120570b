@@ -1,0 +1,5 @@
+package com.learning.hibernatedemo.service;
+
+public class HibernateUtil {
+
+}

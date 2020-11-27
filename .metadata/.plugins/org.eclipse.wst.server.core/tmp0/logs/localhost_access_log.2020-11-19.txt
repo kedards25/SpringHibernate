@@ -1,0 +1,5 @@
+127.0.0.1 - - [19/Nov/2020:10:08:03 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [19/Nov/2020:10:08:04 +0530] "GET /MVC_Demo2/ HTTP/1.1" 200 325
+0:0:0:0:0:0:0:1 - - [19/Nov/2020:10:08:18 +0530] "GET /MVC_Demo2/ HTTP/1.1" 200 325
+0:0:0:0:0:0:0:1 - - [19/Nov/2020:10:08:24 +0530] "GET /MVC_Demo2/ProcessData?usrName=Kedar&usrAddr=Vileparle&usrMail=niit.kedar%40gmail.com HTTP/1.1" 200 63
+0:0:0:0:0:0:0:1 - - [19/Nov/2020:10:09:22 +0530] "GET /MVC_Demo2/index.html HTTP/1.1" 200 325
