@@ -1,0 +1,70 @@
+Any application can be divided into 
+Design
+Logic 
+DB
+
+above mentioned terms in web are referred to as
+Model 	DB
+View	Design
+Controller Logic
+
+web.xml
+<servlet>
+	<servlet-name>ProcessData</servlet-name>
+	<servlet-class>com.learning.servlets.processdata</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ProcessData</servlet-name>
+	<url-pattern>/hello</url-pattern>
+</servlet-mapping>
+
+ProcessData==>after execution renders the view
+
+================================================================
+Spring MVC
+
+localhost:8080/myproject/hello
+
+1.Add Dependencies for
+	core
+	context
+	bean
+	web-mvc
+
+config for incoming requests
+2.web.xml
+<servlet>
+	<servlet-name>processdata</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>processdata</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
+
+3.Requests will be sent to FrontController
+<servlet_name>-servlet.xml
+processdata-servlet.xml
+
+4.config of processdata-servlet.xml
+	configure the base packages to scan for all the controllers
+	configure suffix and prefix for view
+	prefix:say our views are stored in folder named as view
+		prefix:view
+	
+	suffix:our pages will have extension of .jsp
+		suffix: .jsp
+
+5.create controller to correspond to particular request
+	create a normal class and annotate that class with @Controller
+	Declare and define the methods to respond/handle the incoming request
+	and annotate those methods as well with @RequestMapping wherein we will 	mapping the request with method to respond
+	e.g.
+	@RequestMapping("/hello")
+	public String greet()
+	{
+		//return "/view/index.jsp"
+		return "index";
+	}
+	

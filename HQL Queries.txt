@@ -1,0 +1,229 @@
+class BookDetails
+{
+	int bookId;
+	String bookName;
+	String bookGenre;
+	String Author;
+	float price;
+}
+
+Session session=HibernateUtil.getSessionFactory().openSession();
+
+List<BookDetails> bookList=
+session.createQuery("from <package_name>.BookDetails").list();
+
+
+List<BookDetails> bookList=
+session.createQuery("select bookName,author,price from <package_name>.BookDetails").list();
+
+List<BookDetails> bookList=
+session.createQuery("select max(price) from <package_name>.BookDetails").list();
+
+List<BookDetails> bookList=
+session.createQuery("from <package_name>.BookDetails where bookGenre='Mystery'").list();
+
+
+Query bookQuery=
+session.createQuery("from <package_name>.BookDetails where bookGenre=:category");
+String genre="comics";
+query.setString("category",genre);
+
+BookDetails bkd=null;
+Query bookQuery=
+session.createQuery("from <package_name>.BookDetails");
+for(Iterator itr=query.iterate();itr.hasNext())
+{
+	bkd=(BookDetails)itr.next();
+	sop(bkd.getBookId());
+}
+
+BookDetails bkd=null;
+List<BookDetails> bookList=new ArrayList();
+Query query=session.createQuery("from <package_name>.BookDetails");
+for(Iterator itr=query.iterate();itr.hasNext())
+{
+	bkd=(BookDetails)itr.next();
+	bookList.add(bkd);
+}
+return bookList;
+
+List<BookDetails> bookList=session.createQuery("from <package_name>.BookDetails").list();
+return bookList;
+
+Query bookQuery=
+session.createQuery("from <package_name>.BookDetails");
+bookQuery.setFirstResult(2);	//fetches record from third row
+
+
+Query bookQuery=
+session.createQuery("from <package_name>.BookDetails");
+bookQuery.setMaxResult(2);	//fetches maximum 2 records
+=====================================================================
+
+Criteria Queries
+
+Criteria criteria=session.createCriteria(BookDetails.class);
+List bookList=criteria.list();
+
+Criteria criteria=session.createCriteria(BookDetails.class);
+criteria.add(Restrictions.eq("bookGenre","comics"));
+List bookList=criteria.list();
+
+
+Criteria criteria=session.createCriteria(BookDetails.class);
+criteria.add(Restrictions.gt("price",50.00));
+List bookList=criteria.list();
+
+
+Criteria criteria=session.createCriteria(BookDetails.class);
+criteria.add(Restrictions.like("bookAuthor","%jack%"));
+List bookList=criteria.list();
+
+
+Criteria criteria=session.createCriteria(BookDetails.class);
+criteria.add(Restrictions.between("price",new Float(50.00),new Float(100.00));
+List bookList=criteria.list();
+=========================================================================
+
+Persisting Objects
+
+States of an Object
+								evict()
+			save()					close()
+			saveOrUpdate()				clear()
+new object--->Transient<--------------------->Persistent<----------------->Detached	
+				delete()			update()
+								saveOrUpdate()
+
+Object can be available for garbage collection in from transient or detached state
+
+Serializable bkObj=session.save(bkd);
+
+Example
+Session session=HibernateUtil.getSessionFactory().openSession();
+BookDetails bkd=new BookDetails();	//transient
+bkd.setBookId(112);
+bkd.setBookName("Marvel");
+bkd.setBookAuthor("ABC");
+bkd.setBookGenre("Comics");
+bkd.setPrice(1000);
+serializable bkdObj=session.save(bkd);	//persistent
+session.close();	
+Session session=HibernateUtil.getSessionFactory().openSession();
+BookDetails bkdUpdate=(BookDetails)session.load(BookDetails.class,112);	//persistent
+bkdUpdate.setPrice(900);
+session.close();	//detached
+=============================================================================
+Transaction is sequence of statements/instructions which are executed as single 
+unit
+
+Following are the properties of Transaction
+Atomicity
+	Transaction would either complete successfully or not at all
+Consistency
+	Makes sure that data is in consistent format either before modification 	or after modification
+Isolation
+	Concurrent transactions take place independent of each other
+Durabilty
+	Making sure that data is available even in case of system failure by 	means of backup facility
+
+States of Transaction
+	Active
+		Initial state when the transaction is created and ready to 		execute
+
+	Partially Committed
+		State where constituent operations are executed but 		transaction is yet to be committed
+
+	Failed
+		State where one or more constituent operations are failed and			transaction cannot proceed further
+
+	Aborted
+		State where transaction is failed and is rolled back
+
+	Committed
+		State where constituent operations are executed successfully 		and transaction is committed in DB
+
+	Terminated
+		State where transaction is finished due to either failure or 		successful execution
+
+example
+Transaction tran=null;
+Session session=null;
+try
+{
+//persisting the new object
+session=HibernateUtil.getSessionFactory().openSession();
+tran=session.beginTransaction();
+BookDetails bkd=new BookDetails();	//transient
+bkd.setBookId(112);
+bkd.setBookName("Marvel");
+bkd.setBookAuthor("ABC");
+bkd.setBookGenre("Comics");
+bkd.setPrice(1000);
+serializable bkdObj=session.save(bkd);	//persistent
+tran.commit();
+session.close();	
+//updating and persisting an existing object
+session=HibernateUtil.getSessionFactory().openSession();
+tran=session.beginTransaction();
+BookDetails bkdUpdate=(BookDetails)session.load(BookDetails.class,112);	//persistent
+bkdUpdate.setPrice(900);
+tran.commit();
+	//detached
+}
+catch(Exception e)
+{
+	if(tran!=null)
+	{
+		tran.rollback();
+	}
+	SOP(e.getMessage());
+}
+finally
+{
+	if(session!=null)
+	{
+		session.close();	
+	}
+}
+
+
+Concurrency
+
+Concurrency Issues
+	Dirty Read
+			Reading the uncommitted data
+
+	Lost updates
+			loss of data operated by previous transaction
+
+	Nonrepeatable	data being read between two successful transactions
+	read
+
+	phantom read
+			data being modified by other transaction between 			successive reads by first transaction
+
+Isolation levels to avoid concurrency issues
+	Read Uncommitted	valid value=1
+			Allowing transaction to read uncommitted data
+			All issues can occur here
+	Read Committed		valid value=2
+			Allows to read data that is committed,overcomes the 				problem of dirty read but all other issues will still 				be there
+			Default Isolation level of SQL
+	Repeatable Read		valid value=4
+			No other transaction can read the data that is being 				modified by one transaction
+
+	Serialized		valid value=8
+			No other transaction can read,modify,insert or delete 				the data that is being modified by one transaction
+
+in hibernate.cfg.xml
+	<property name="hibernate.connection.isolation">8<property>
+			
+
+
+
+
+
+
+
+

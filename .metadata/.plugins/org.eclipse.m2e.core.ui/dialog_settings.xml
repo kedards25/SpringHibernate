@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiAssociation_Annotations\src\main\java\com\learning\diannotations\DiAssociation_Annotations\App.java"/>
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiAnnotations\src\main\java\com\learning\diannotations\App.java"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiApplicationContext\src\main\java\com\learning\dependecyinjectionapplicationcontext\App.java"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\IheritanceDiConfig\src\main\java\com\learning\inheritancediconfig\App.java"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DependencyInjectionConfig\src\main\java\com\learning\dependencyinjectionconfig\DemoClass.java"/>
@@ -30,31 +32,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.learning.diannotations"/>
-			<item value="com.learning.dependecyinjectionapplicationcontext"/>
-			<item value="com.learning.inheritancediconfig"/>
-			<item value="com.learning.constructorinjectionconfig"/>
-			<item value="com.learning.propertyinjectionconfig"/>
-			<item value="com.learning.dependencyinjectionconfig"/>
-			<item value="com.learning.hibernatedemo"/>
 		</list>
 		<list key="groupId">
-			<item value="com.learning.diannotations"/>
-			<item value="com.learning.dependecyinjectionapplicationcontext"/>
-			<item value="com.learning.inheritancediconfig"/>
-			<item value="com.learning.constructorinjectionconfig"/>
-			<item value="com.learning.propertyinjectionconfig"/>
-			<item value="com.learning.dependencyinjectionconfig"/>
-			<item value="com.learning.hibernatedemo"/>
 		</list>
 		<list key="artifactId">
-			<item value="DiAnnotations"/>
-			<item value="DiApplicationContext"/>
-			<item value="IhertanceDiConfig"/>
-			<item value="ConstructorInjectionConfig"/>
-			<item value="PropertyInjectionConfig"/>
-			<item value="DependencyInjectionConfig"/>
-			<item value="HibernateDemo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

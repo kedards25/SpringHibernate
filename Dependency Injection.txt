@@ -1,0 +1,80 @@
+class Student
+{
+	public int studentId;
+	public Address address;
+	Public Exam exam;
+	
+	Student(int stdId)
+	{
+		studentId=stdId;
+		address=new Address("xyz","adh",400058);
+		exam=new Exam(105,"SQL",1.5);		
+	}
+
+	Student(int stdId,Address adr,Exam ex)
+	{
+		studentId=stdId;
+		address=adr;
+		exam=ex;
+	}
+}
+
+class Address
+{
+	String societyName;
+	String area;
+	long zipcode;
+	String StreetName;
+
+	public Address()
+	{
+		societyName="Abc";
+		area="vileparle";
+		zipcode=400057;
+	}
+	
+	public Address(String name,String area,long pin)
+	{
+		societyName=name;
+		this.area=area;
+		zipcode=pin;
+	}
+}
+
+
+class Exam
+{
+	int examCode;
+	String examName;
+	long duration;
+	float marks;
+
+	public Exam()
+	{
+		examCode=101;
+		examName="Java";
+		duration=2.5;
+	}
+
+	public Exam(int exCode,String exName,long durt)
+	{
+		examCode=exCode;
+		examName=exName;
+		duration=durt;
+	}
+}
+
+Dependency Injection 
+	Spring allows us to implement loose coupling using a feature called as dependency injection.To enable this feature spring has a concept of Spring Container in which we need not to create objects instead we need to specify how objects are going to be created
+	Spring container creates and injects object as and wherever required thus implementing loose coupling.
+	
+	Ways to achieve dependency injection
+		Imperitive:	using xml file and mapping them manually with 				the help of 
+				a)Bean Factory
+				b)Application Context
+	
+		Declarative:	using annotations on the class which are 					supposed to be injected
+
+
+
+
