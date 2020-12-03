@@ -20,6 +20,10 @@ extends AbstractAnnotationConfigDispatcherServletInitializer {
 	@Override
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
+		//here we mention that any url request after by '/'
+		//has to be received by DispatcherServlet and 
+		//then should be forwaded
+		//to MvcConfig
 		return new String[] {"/"};
 	}
 

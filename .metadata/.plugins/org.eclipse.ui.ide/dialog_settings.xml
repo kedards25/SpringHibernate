@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\Professional\NIIT\Online Sessions\Spring\AOP_App"/>
+		<item value="D:\Professional\NIIT\Eclipse Projects\FSSE-Term 3\SpringMVC_Annotations"/>
 		<item value="D:\Professional\NIIT\Online Sessions\Adv Java 9-11\MVC_Demo2"/>
 	</list>
 </section>

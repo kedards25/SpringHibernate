@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\SpringMVC\src\main\webapp\WEB-INF\web.xml"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiAssociation_Annotations\src\main\java\com\learning\diannotations\DiAssociation_Annotations\App.java"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiAnnotations\src\main\java\com\learning\diannotations\App.java"/>
 			<item value="D:\Professional\NIIT\Online Sessions\Spring Hibernate\DiApplicationContext\src\main\java\com\learning\dependecyinjectionapplicationcontext\App.java"/>
@@ -32,10 +33,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.learning.springmvcannotations"/>
+			<item value="com.learning.springmvc"/>
 		</list>
 		<list key="groupId">
+			<item value="com.learning.springmvcannotations"/>
+			<item value="com.learning.springmvc"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringMvcAnnotations"/>
+			<item value="SpringMVC"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

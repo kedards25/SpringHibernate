@@ -23,7 +23,7 @@ ProcessData==>after execution renders the view
 ================================================================
 Spring MVC
 
-localhost:8080/myproject/hello
+url=>localhost:8080/myproject/hello
 
 1.Add Dependencies for
 	core
