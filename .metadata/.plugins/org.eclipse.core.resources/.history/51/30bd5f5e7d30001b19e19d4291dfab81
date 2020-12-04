@@ -1,7 +1,0 @@
-package com.learning.inheritancediconfig;
-
-public class DemoP {
-
-	protected String color;
-	
-}

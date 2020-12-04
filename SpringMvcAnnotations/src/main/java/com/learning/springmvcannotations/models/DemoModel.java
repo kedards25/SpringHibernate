@@ -1,5 +1,11 @@
 package com.learning.springmvcannotations.models;
 
+
+
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.stereotype.Component;
 
 //states that instance of this class
@@ -8,9 +14,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoModel {
 
+//	@Size(min=1,message = "Required")
+//	@Positive
 	private int demoId;
+	
+	@Size(min=5,message = "Cannot be empty")
 	private String demoName;
+	
 	private String demoAddr;
+	
+	//@UniqueElements
 	private String demoMail;
 	
 	public DemoModel() {

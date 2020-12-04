@@ -33,14 +33,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.learning.aopannotations"/>
+			<item value="com.learning.aopconfig"/>
 			<item value="com.learning.springmvcannotations"/>
 			<item value="com.learning.springmvc"/>
 		</list>
 		<list key="groupId">
+			<item value="com.learning.aopannotations"/>
+			<item value="com.learning.aopconfig"/>
 			<item value="com.learning.springmvcannotations"/>
 			<item value="com.learning.springmvc"/>
 		</list>
 		<list key="artifactId">
+			<item value="AopAnnotations"/>
+			<item value="AopConfig"/>
 			<item value="SpringMvcAnnotations"/>
 			<item value="SpringMVC"/>
 		</list>

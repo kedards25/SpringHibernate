@@ -1,9 +1,0 @@
-package com.learning.dependencyinjectionconfig;
-
-public class DemoClass {
-
-	void show()
-	{
-		System.out.println("Welcome to DemoClass");
-	}
-}

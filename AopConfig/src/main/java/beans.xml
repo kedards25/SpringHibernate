@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<bean id="primLogicBean" class="com.learning.aopconfig.PrimaryClass" />
+
+	<bean id="secLogicBean" class="com.learning.aopconfig.SecondaryClass" />
+
+	<aop:config>
+
+		<aop:pointcut
+			expression="execution(* com.learning.aopconfig.PrimaryClass.*(..))"
+			id="primLogicPointcut" />
+
+<!-- 		<aop:pointcut
+			expression="execution(* com.learning.aopapp.PrimaryLogic.show(..))"
+			id="showPointCut" /> -->
+
+		<aop:aspect ref="secLogicBean" id="primLogicAspect">
+			<aop:before method="execBefore"
+				pointcut-ref="primLogicPointcut" />
+
+			<aop:after method="execAfter"
+				pointcut-ref="primLogicPointcut" />
+		</aop:aspect>
+
+<!-- 		<aop:aspect ref="secLogicBean" id="showMethodAspect">
+			<aop:before method="invokeBeforeShow"
+				pointcut-ref="showPointCut" />
+
+			<aop:after method="invokeAfterShow"
+				pointcut-ref="showPointCut" />
+		</aop:aspect> -->
+
+	</aop:config>
+</beans>
