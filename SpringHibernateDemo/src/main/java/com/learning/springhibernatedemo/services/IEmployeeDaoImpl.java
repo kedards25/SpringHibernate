@@ -37,7 +37,7 @@ public class IEmployeeDaoImpl implements IEmployeeDao {
 						+ " where empId="+employeeId)
 				.list()
 				.get(0);
-
+		System.out.println(model);
 		return model;
 	}
 
@@ -67,16 +67,17 @@ public class IEmployeeDaoImpl implements IEmployeeDao {
 		empModel.setEmpDept(model.getEmpDept());
 		empModel.setEmpSal(model.getEmpSal());
 		
-		EmployeeModel emplModel=null;
-		emplModel=(EmployeeModel)factory
+//		EmployeeModel emplModel=null;
+//		emplModel=(EmployeeModel)
+		factory
 			.getCurrentSession()
 			.save(model);
-		
-		if(empModel!=null)
-		{
+//		
+//		if(empModel!=null)
+//		{
 			return true;
-		}
-		return false;
+//		}
+//		return false;
 	}
 
 	public void deleteEmployee(int employeeId) {
@@ -90,5 +91,6 @@ public class IEmployeeDaoImpl implements IEmployeeDao {
 		.getCurrentSession()
 		.delete(empModel);
 	}
+	
 
 }

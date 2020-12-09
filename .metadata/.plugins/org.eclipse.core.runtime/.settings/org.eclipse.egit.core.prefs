@@ -1,3 +1,4 @@
 GitRepositoriesView.GitDirectories=D\:\\Professional\\NIIT\\Eclipse Projects\\.git;D\:\\Professional\\NIIT\\Online Sessions\\Spring Hibernate\\.git;D\:\\Professional\\NIIT\\Online Sessions\\Adv Java 9-11\\.git;
 GitRepositoriesView.GitDirectories.relative=D\:\\Professional\\NIIT\\Eclipse Projects\\.git;.git;D\:\\Professional\\NIIT\\Online Sessions\\Adv Java 9-11\\.git;
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
